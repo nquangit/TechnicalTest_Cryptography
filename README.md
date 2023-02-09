@@ -18,7 +18,7 @@ And we got "ROT8000 Cipher". Let's decode it then we receive a text with many sy
 
 If you've researched, it's easy to see that it is BrainFuck - code that was designed to hurt. But if you haven't heard of it, no problem, let's keep using Cipher Identifier.
 
-![identify2](identiy2.png)
+![identify2](identify2.png)
 
 Not so surprised. Let's run it. Then we got the output.
 ```
