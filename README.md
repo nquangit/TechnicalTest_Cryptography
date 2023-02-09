@@ -68,7 +68,7 @@ What must we do? Reverse the encoded function and we can get the decode function
 The code for this can seem be like that:
 ```
 #!/usr/bin/python3
-from chall import base
+from chall import base # This file must be in the same folder with chall.py
 encoded = "TTcilRoPcTnOd3sMlTsvdlcvh7sp9ToKdPnPc5dyZ5dSERu1BAh="
 # Swap key and value of base dict
 base = dict(zip(base.values(), base.keys()))
