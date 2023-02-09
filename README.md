@@ -8,8 +8,8 @@ At the start, we have a text file BoryCipher.txt with the content:
 ```
 
 Let's check its cipher type with Cipher Identifier (https://www.dcode.fr/cipher-identifier)
-![[identify1.png]]
-![identify1.png](identify1.png)
+![identify1](identify1.png)
+
 And we got "ROT8000 Cipher". Let's decode it then we receive a text with many symbols that look a bit messy.
 ```
 ++++++++++[>+>+++>+++++++>++++++++++<<<<-]>>>+++++++++++++.<+++++++++++++++++++.>-------------.----.>+.<<.>>+++.++.-------.<++.++++++++++.<++.>++++++++++.<---.>>+++++++++++++++++++++.<<+.>++++++++++++.----------------.------.<+++++.>++++++++++.<------.>---------------.>-.-------------------.<<++.>>.++.<++++++++++++.>++++++++++++++++++++.<-------.>-----------.<+++++++++++.<+.>----------------.>+++++++++++.<+++++++++++++++.<---.>+++++++++++++++.>--.<--.<+++++++++++++++++++++++.>++.>++.<---.<--------------------.---.+++++++++++++.
@@ -17,24 +17,26 @@ And we got "ROT8000 Cipher". Let's decode it then we receive a text with many sy
 
 If you've researched, it's easy to see that it is BrainFuck - code that was designed to hurt. But if you haven't heard of it, no problem, let's keep using Cipher Identifier.
 
-![[identify2.png]]
+![identify2](identiy2.png)
+
 Not so surprised. Let's run it. Then we got the output.
 ```
 S1FBe1hjcDN3X0x1dTN6X0Iwd2dfUzNoY3IzX0gxeGgzd30=
 ```
 
 It seems to be base64 encoded, but let's check it for sure.
-![[identify3.png]]
+![identify3](identify3.png)
+
 Continue decoding it. We got
 ```
 KQA{Xcp3w_Luu3z_B0wg_S3hcr3_H1xh3w}
 ```
 It's quite similar to the flag pattern but not correct, the head must be FIA. Continue to identify it. We got a list of cipher types, but it seems to be not good.
-![[identify4.png]]
+![identify4](identify4.png)
 
 Read the description again and we got **Mr Vignere**. It is like a type of cipher in the list above. Let's try it. After run **Automatic decryption**, we also can't get the flag. What is wrong? The Vignere Cipher needs a key/password to encrypt/decrypt. **Automatic decryption** is a brute force attack to find the exact key/password but it is unreliable, and if you have researched it, the success rate of it is very low. Check the description again. What is special? **FIA** in double quote. It may be the key. Check it. 
 
-![[result.png]]
+![result](result.png)
 
 Successfully, we got the flag.
 ```
